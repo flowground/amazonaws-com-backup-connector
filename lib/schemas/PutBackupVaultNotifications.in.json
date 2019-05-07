@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "properties": {
+        "backupVaultName": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "BackupVaultEvents": {
+                    "description": "An array of events that indicate the status of jobs to back up resources to the backup vault.",
+                    "items": {
+                        "enum": [
+                            "BACKUP_JOB_STARTED",
+                            "BACKUP_JOB_COMPLETED",
+                            "RESTORE_JOB_STARTED",
+                            "RESTORE_JOB_COMPLETED",
+                            "RECOVERY_POINT_MODIFIED",
+                            "BACKUP_PLAN_CREATED",
+                            "BACKUP_PLAN_MODIFIED"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "SNSTopicArn": {
+                    "description": "The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events; for example, <code>arn:aws:sns:us-west-2:111122223333:MyVaultTopic</code>.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "SNSTopicArn",
+                "BackupVaultEvents"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

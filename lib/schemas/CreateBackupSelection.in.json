@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "properties": {
+        "backupPlanId": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "BackupSelection": {
+                    "description": "<p>Specifies the body of a request to assign a set of resources to a backup plan.</p> <p>It includes an array of resources, an optional array of patterns to exclude resources, an optional role to provide access to the AWS service the resource belongs to, and an optional array of tags used to identify a set of resources.</p>",
+                    "properties": {
+                        "IamRoleArn": {
+                            "description": "The ARN of the IAM role that AWS Backup uses to authenticate when restoring the target resource; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.",
+                            "type": "string"
+                        },
+                        "ListOfTags": {
+                            "description": "An array of conditions used to specify a set of resources to assign to a backup plan; for example, <code>\"StringEquals\": {\"ec2:ResourceTag/Department\": \"accounting\"</code>.",
+                            "items": {
+                                "description": "Contains an array of triplets made up of a condition type (such as <code>StringEquals</code>), a key, and a value. Conditions are used to filter resources in a selection that is assigned to a backup plan.",
+                                "properties": {
+                                    "ConditionKey": {
+                                        "description": "The key in a key-value pair. For example, in <code>\"ec2:ResourceTag/Department\": \"accounting\"</code>, <code>\"ec2:ResourceTag/Department\"</code> is the key.",
+                                        "type": "string"
+                                    },
+                                    "ConditionType": {
+                                        "description": "An operation, such as <code>StringEquals</code>, that is applied to a key-value pair used to filter resources in a selection.",
+                                        "enum": [
+                                            "STRINGEQUALS"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "ConditionValue": {
+                                        "description": "The value in a key-value pair. For example, in <code>\"ec2:ResourceTag/Department\": \"accounting\"</code>, <code>\"accounting\"</code> is the value.",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "ConditionType",
+                                    "ConditionKey",
+                                    "ConditionValue"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "Resources": {
+                            "description": "An array of strings that either contain Amazon Resource Names (ARNs) or match patterns such as \"<code>arn:aws:ec2:us-east-1:123456789012:volume/*</code>\" of resources to assign to a backup plan.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "SelectionName": {
+                            "description": "The display name of a resource selection document.",
+                            "pattern": "^[a-zA-Z0-9\\-\\_\\.]{1,50}$",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "SelectionName",
+                        "IamRoleArn"
+                    ],
+                    "type": "object"
+                },
+                "CreatorRequestId": {
+                    "description": "A unique string that identifies the request and allows failed requests to be retried without the risk of executing the operation twice.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "BackupSelection"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

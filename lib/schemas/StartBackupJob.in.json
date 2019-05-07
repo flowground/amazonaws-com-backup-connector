@@ -1,0 +1,105 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "BackupVaultName": {
+                    "description": "The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.",
+                    "pattern": "^[a-zA-Z0-9\\-\\_\\.]{1,50}$",
+                    "type": "string"
+                },
+                "CompleteWindowMinutes": {
+                    "description": "The amount of time AWS Backup attempts a backup before canceling the job and returning an error.",
+                    "type": "integer"
+                },
+                "IamRoleArn": {
+                    "description": "Specifies the IAM role ARN used to create the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.",
+                    "type": "string"
+                },
+                "IdempotencyToken": {
+                    "description": "A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>. Idempotency tokens time out after one hour. Therefore, if you call <code>StartBackupJob</code> multiple times with the same idempotency token within one hour, AWS Backup recognizes that you are requesting only one backup job and initiates only one. If you change the idempotency token for each call, AWS Backup recognizes that you are requesting to start multiple backups.",
+                    "type": "string"
+                },
+                "Lifecycle": {
+                    "description": "<p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup will transition and expire backups automatically according to the lifecycle that you define. </p> <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>",
+                    "properties": {
+                        "DeleteAfterDays": {
+                            "description": "Specifies the number of days after creation that a recovery point is deleted. Must be greater than <code>MoveToColdStorageAfterDays</code>.",
+                            "type": "integer"
+                        },
+                        "MoveToColdStorageAfterDays": {
+                            "description": "Specifies the number of days after creation that a recovery point is moved to cold storage.",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "RecoveryPointTags": {
+                    "description": "To help organize your resources, you can assign your own metadata to the resources that you create. Each tag is a key-value pair.",
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "ResourceArn": {
+                    "description": "An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.",
+                    "type": "string"
+                },
+                "StartWindowMinutes": {
+                    "description": "The amount of time in minutes before beginning a backup.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "BackupVaultName",
+                "ResourceArn",
+                "IamRoleArn"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
