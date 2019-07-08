@@ -1,6 +1,6 @@
 {
     "title": "AWS Backup",
-    "description": "<fullname>AWS Backup</fullname> <p>AWS Backup is a unified backup service designed to protect AWS services and their associated data. AWS Backup simplifies the creation, migration, restoration, and deletion of backups, while also providing reporting and auditing.</p>",
+    "description": "AWS Backup AWS Backup is a unified backup service designed to protect AWS\nservices and their associated data. AWS Backup simplifies the creation,\nmigration, restoration, and deletion of backups, while also providing reporting\nand auditing.",
     "docsUrl": "https://aws.amazon.com/backup/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/backup/2018-11-15/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,7 +38,7 @@
     "actions": {
         "StartBackupJob": {
             "main": "./lib/actions/StartBackupJob.js",
-            "title": "Starts a job to create a one-time backup of the specified resource.",
+            "title": "StartBackupJob",
             "description": "Starts a job to create a one-time backup of the specified resource.",
             "fields": {
                 "verbose": {
@@ -55,7 +55,7 @@
         },
         "ListBackupJobs": {
             "main": "./lib/actions/ListBackupJobs.js",
-            "title": "Returns metadata about your backup jobs.",
+            "title": "ListBackupJobs",
             "description": "Returns metadata about your backup jobs.",
             "fields": {
                 "verbose": {
@@ -72,7 +72,7 @@
         },
         "DescribeBackupJob": {
             "main": "./lib/actions/DescribeBackupJob.js",
-            "title": "Returns metadata associated with creating a backup of a resource.",
+            "title": "DescribeBackupJob",
             "description": "Returns metadata associated with creating a backup of a resource.",
             "fields": {
                 "verbose": {
@@ -89,7 +89,7 @@
         },
         "StopBackupJob": {
             "main": "./lib/actions/StopBackupJob.js",
-            "title": "Attempts to cancel a job to create a one-time backup of a resource.",
+            "title": "StopBackupJob",
             "description": "Attempts to cancel a job to create a one-time backup of a resource.",
             "fields": {
                 "verbose": {
@@ -106,7 +106,7 @@
         },
         "ListBackupVaults": {
             "main": "./lib/actions/ListBackupVaults.js",
-            "title": "Returns a list of recovery point storage containers along with information about them.",
+            "title": "ListBackupVaults",
             "description": "Returns a list of recovery point storage containers along with information about them.",
             "fields": {
                 "verbose": {
@@ -123,7 +123,7 @@
         },
         "DeleteBackupVault": {
             "main": "./lib/actions/DeleteBackupVault.js",
-            "title": "Deletes the backup vault identified by its name. A vault can be deleted only if it is empty.",
+            "title": "DeleteBackupVault",
             "description": "Deletes the backup vault identified by its name. A vault can be deleted only if it is empty.",
             "fields": {
                 "verbose": {
@@ -140,7 +140,7 @@
         },
         "DescribeBackupVault": {
             "main": "./lib/actions/DescribeBackupVault.js",
-            "title": "Returns metadata about a backup vault specified by its name.",
+            "title": "DescribeBackupVault",
             "description": "Returns metadata about a backup vault specified by its name.",
             "fields": {
                 "verbose": {
@@ -157,8 +157,8 @@
         },
         "CreateBackupVault": {
             "main": "./lib/actions/CreateBackupVault.js",
-            "title": "<p>Creates a logical container where backups are stored. A <code>CreateBackupVault</code> request includes a name, optionally one or more resource tags, an encryption key, and a request ID.</p> <note> <p>Sensitive data, such as passport numbers, should not be included the name of a backup vault.</p> </note>",
-            "description": "<p>Creates a logical container where backups are stored. A <code>CreateBackupVault</code> request includes a name, optionally one or more resource tags, an encryption key, and a request ID.</p> <note> <p>Sensitive data, such as passport numbers, should not be included the name of a backup vault.</p> </note>",
+            "title": "CreateBackupVault",
+            "description": "Creates a logical container where backups are stored. A CreateBackupVault \nrequest includes a name, optionally one or more resource tags, an encryption\nkey, and a request ID.\n\nSensitive data, such as passport numbers, should not be included the name of a\nbackup vault.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -174,7 +174,7 @@
         },
         "DeleteBackupVaultAccessPolicy": {
             "main": "./lib/actions/DeleteBackupVaultAccessPolicy.js",
-            "title": "Deletes the policy document that manages permissions on a backup vault.",
+            "title": "DeleteBackupVaultAccessPolicy",
             "description": "Deletes the policy document that manages permissions on a backup vault.",
             "fields": {
                 "verbose": {
@@ -191,7 +191,7 @@
         },
         "GetBackupVaultAccessPolicy": {
             "main": "./lib/actions/GetBackupVaultAccessPolicy.js",
-            "title": "Returns the access policy document that is associated with the named backup vault.",
+            "title": "GetBackupVaultAccessPolicy",
             "description": "Returns the access policy document that is associated with the named backup vault.",
             "fields": {
                 "verbose": {
@@ -208,7 +208,7 @@
         },
         "PutBackupVaultAccessPolicy": {
             "main": "./lib/actions/PutBackupVaultAccessPolicy.js",
-            "title": "Sets a resource-based policy that is used to manage access permissions on the target backup vault. Requires a backup vault name and an access policy document in JSON format.",
+            "title": "PutBackupVaultAccessPolicy",
             "description": "Sets a resource-based policy that is used to manage access permissions on the target backup vault. Requires a backup vault name and an access policy document in JSON format.",
             "fields": {
                 "verbose": {
@@ -225,7 +225,7 @@
         },
         "DeleteBackupVaultNotifications": {
             "main": "./lib/actions/DeleteBackupVaultNotifications.js",
-            "title": "Deletes event notifications for the specified backup vault.",
+            "title": "DeleteBackupVaultNotifications",
             "description": "Deletes event notifications for the specified backup vault.",
             "fields": {
                 "verbose": {
@@ -242,7 +242,7 @@
         },
         "GetBackupVaultNotifications": {
             "main": "./lib/actions/GetBackupVaultNotifications.js",
-            "title": "Returns event notifications for the specified backup vault.",
+            "title": "GetBackupVaultNotifications",
             "description": "Returns event notifications for the specified backup vault.",
             "fields": {
                 "verbose": {
@@ -259,7 +259,7 @@
         },
         "PutBackupVaultNotifications": {
             "main": "./lib/actions/PutBackupVaultNotifications.js",
-            "title": "Turns on notifications on a backup vault for the specified topic and events.",
+            "title": "PutBackupVaultNotifications",
             "description": "Turns on notifications on a backup vault for the specified topic and events.",
             "fields": {
                 "verbose": {
@@ -276,7 +276,7 @@
         },
         "ListRecoveryPointsByBackupVault": {
             "main": "./lib/actions/ListRecoveryPointsByBackupVault.js",
-            "title": "Returns detailed information about the recovery points stored in a backup vault.",
+            "title": "ListRecoveryPointsByBackupVault",
             "description": "Returns detailed information about the recovery points stored in a backup vault.",
             "fields": {
                 "verbose": {
@@ -293,7 +293,7 @@
         },
         "DeleteRecoveryPoint": {
             "main": "./lib/actions/DeleteRecoveryPoint.js",
-            "title": "Deletes the recovery point specified by a recovery point ID.",
+            "title": "DeleteRecoveryPoint",
             "description": "Deletes the recovery point specified by a recovery point ID.",
             "fields": {
                 "verbose": {
@@ -310,7 +310,7 @@
         },
         "DescribeRecoveryPoint": {
             "main": "./lib/actions/DescribeRecoveryPoint.js",
-            "title": "Returns metadata associated with a recovery point, including ID, status, encryption, and lifecycle.",
+            "title": "DescribeRecoveryPoint",
             "description": "Returns metadata associated with a recovery point, including ID, status, encryption, and lifecycle.",
             "fields": {
                 "verbose": {
@@ -327,8 +327,8 @@
         },
         "UpdateRecoveryPointLifecycle": {
             "main": "./lib/actions/UpdateRecoveryPointLifecycle.js",
-            "title": "<p>Sets the transition lifecycle of a recovery point.</p> <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup transitions and expires backups automatically according to the lifecycle that you define. </p> <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the \"expire after days\" setting must be 90 days greater than the \"transition to cold after days\" setting. The \"transition to cold after days\" setting cannot be changed after a backup has been transitioned to cold. </p>",
-            "description": "<p>Sets the transition lifecycle of a recovery point.</p> <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup transitions and expires backups automatically according to the lifecycle that you define. </p> <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the \"expire after days\" setting must be 90 days greater than the \"transition to cold after days\" setting. The \"transition to cold after days\" setting cannot be changed after a backup has been transitioned to cold. </p>",
+            "title": "UpdateRecoveryPointLifecycle",
+            "description": "Sets the transition lifecycle of a recovery point.\n\nThe lifecycle defines when a protected resource is transitioned to cold storage\nand when it expires. AWS Backup transitions and expires backups automatically\naccording to the lifecycle that you define. \n\nBackups transitioned to cold storage must be stored in cold storage for a\nminimum of 90 days. Therefore, the \"expire after days\" setting must be 90 days\ngreater than the \"transition to cold after days\" setting. The \"transition to\ncold after days\" setting cannot be changed after a backup has been transitioned\nto cold.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -344,8 +344,8 @@
         },
         "GetRecoveryPointRestoreMetadata": {
             "main": "./lib/actions/GetRecoveryPointRestoreMetadata.js",
-            "title": "<p>Returns two sets of metadata key-value pairs. The first set lists the metadata that the recovery point was created with. The second set lists the metadata key-value pairs that are required to restore the recovery point.</p> <p>These sets can be the same, or the restore metadata set can contain different values if the target service to be restored has changed since the recovery point was created and now requires additional or different information in order to be restored.</p>",
-            "description": "<p>Returns two sets of metadata key-value pairs. The first set lists the metadata that the recovery point was created with. The second set lists the metadata key-value pairs that are required to restore the recovery point.</p> <p>These sets can be the same, or the restore metadata set can contain different values if the target service to be restored has changed since the recovery point was created and now requires additional or different information in order to be restored.</p>",
+            "title": "GetRecoveryPointRestoreMetadata",
+            "description": "Returns two sets of metadata key-value pairs. The first set lists the metadata\nthat the recovery point was created with. The second set lists the metadata\nkey-value pairs that are required to restore the recovery point.\n\nThese sets can be the same, or the restore metadata set can contain different\nvalues if the target service to be restored has changed since the recovery point\nwas created and now requires additional or different information in order to be\nrestored.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -361,7 +361,7 @@
         },
         "ListBackupPlans": {
             "main": "./lib/actions/ListBackupPlans.js",
-            "title": "Returns metadata of your saved backup plans, including Amazon Resource Names (ARNs), plan IDs, creation and deletion dates, version IDs, plan names, and creator request IDs.",
+            "title": "ListBackupPlans",
             "description": "Returns metadata of your saved backup plans, including Amazon Resource Names (ARNs), plan IDs, creation and deletion dates, version IDs, plan names, and creator request IDs.",
             "fields": {
                 "verbose": {
@@ -378,8 +378,8 @@
         },
         "CreateBackupPlan": {
             "main": "./lib/actions/CreateBackupPlan.js",
-            "title": "<p>Backup plans are documents that contain information that AWS Backup uses to schedule tasks that create recovery points of resources.</p> <p>If you call <code>CreateBackupPlan</code> with a plan that already exists, the existing <code>backupPlanId</code> is returned.</p>",
-            "description": "<p>Backup plans are documents that contain information that AWS Backup uses to schedule tasks that create recovery points of resources.</p> <p>If you call <code>CreateBackupPlan</code> with a plan that already exists, the existing <code>backupPlanId</code> is returned.</p>",
+            "title": "CreateBackupPlan",
+            "description": "Backup plans are documents that contain information that AWS Backup uses to\nschedule tasks that create recovery points of resources.\n\nIf you call CreateBackupPlan with a plan that already exists, the existing \nbackupPlanId is returned.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -395,7 +395,7 @@
         },
         "DeleteBackupPlan": {
             "main": "./lib/actions/DeleteBackupPlan.js",
-            "title": "Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will still exist.",
+            "title": "DeleteBackupPlan",
             "description": "Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will still exist.",
             "fields": {
                 "verbose": {
@@ -412,7 +412,7 @@
         },
         "UpdateBackupPlan": {
             "main": "./lib/actions/UpdateBackupPlan.js",
-            "title": "Replaces the body of a saved backup plan identified by its <code>backupPlanId</code> with the input document in JSON format. The new version is uniquely identified by a <code>VersionId</code>.",
+            "title": "UpdateBackupPlan",
             "description": "Replaces the body of a saved backup plan identified by its <code>backupPlanId</code> with the input document in JSON format. The new version is uniquely identified by a <code>VersionId</code>.",
             "fields": {
                 "verbose": {
@@ -429,7 +429,7 @@
         },
         "GetBackupPlan": {
             "main": "./lib/actions/GetBackupPlan.js",
-            "title": "Returns the body of a backup plan in JSON format, in addition to plan metadata.",
+            "title": "GetBackupPlan",
             "description": "Returns the body of a backup plan in JSON format, in addition to plan metadata.",
             "fields": {
                 "verbose": {
@@ -446,7 +446,7 @@
         },
         "ListBackupSelections": {
             "main": "./lib/actions/ListBackupSelections.js",
-            "title": "Returns an array containing metadata of the resources associated with the target backup plan.",
+            "title": "ListBackupSelections",
             "description": "Returns an array containing metadata of the resources associated with the target backup plan.",
             "fields": {
                 "verbose": {
@@ -463,8 +463,8 @@
         },
         "CreateBackupSelection": {
             "main": "./lib/actions/CreateBackupSelection.js",
-            "title": "<p>Creates a JSON document that specifies a set of resources to assign to a backup plan. Resources can be included by specifying patterns for a <code>ListOfTags</code> and selected <code>Resources</code>. </p> <p>For example, consider the following patterns:</p> <ul> <li> <p> <code>Resources: \"arn:aws:ec2:region:account-id:volume/volume-id\"</code> </p> </li> <li> <p> <code>ConditionKey:\"department\"</code> </p> <p> <code>ConditionValue:\"finance\"</code> </p> <p> <code>ConditionType:\"StringEquals\"</code> </p> </li> <li> <p> <code>ConditionKey:\"importance\"</code> </p> <p> <code>ConditionValue:\"critical\"</code> </p> <p> <code>ConditionType:\"StringEquals\"</code> </p> </li> </ul> <p>Using these patterns would back up all Amazon Elastic Block Store (Amazon EBS) volumes that are tagged as <code>\"department=finance\"</code>, <code>\"importance=critical\"</code>, in addition to an EBS volume with the specified volume Id.</p> <p>Resources and conditions are additive in that all resources that match the pattern are selected. This shouldn't be confused with a logical AND, where all conditions must match. The matching patterns are logically 'put together using the OR operator. In other words, all patterns that match are selected for backup.</p>",
-            "description": "<p>Creates a JSON document that specifies a set of resources to assign to a backup plan. Resources can be included by specifying patterns for a <code>ListOfTags</code> and selected <code>Resources</code>. </p> <p>For example, consider the following patterns:</p> <ul> <li> <p> <code>Resources: \"arn:aws:ec2:region:account-id:volume/volume-id\"</code> </p> </li> <li> <p> <code>ConditionKey:\"department\"</code> </p> <p> <code>ConditionValue:\"finance\"</code> </p> <p> <code>ConditionType:\"StringEquals\"</code> </p> </li> <li> <p> <code>ConditionKey:\"importance\"</code> </p> <p> <code>ConditionValue:\"critical\"</code> </p> <p> <code>ConditionType:\"StringEquals\"</code> </p> </li> </ul> <p>Using these patterns would back up all Amazon Elastic Block Store (Amazon EBS) volumes that are tagged as <code>\"department=finance\"</code>, <code>\"importance=critical\"</code>, in addition to an EBS volume with the specified volume Id.</p> <p>Resources and conditions are additive in that all resources that match the pattern are selected. This shouldn't be confused with a logical AND, where all conditions must match. The matching patterns are logically 'put together using the OR operator. In other words, all patterns that match are selected for backup.</p>",
+            "title": "CreateBackupSelection",
+            "description": "Creates a JSON document that specifies a set of resources to assign to a backup\nplan. Resources can be included by specifying patterns for a ListOfTags and\nselected Resources. \n\nFor example, consider the following patterns:\n\n *   Resources: \"arn:aws:ec2:region:account-id:volume/volume-id\" \n   \n   \n *   ConditionKey:\"department\" \n   \n    ConditionValue:\"finance\" \n   \n    ConditionType:\"StringEquals\" \n   \n   \n *   ConditionKey:\"importance\" \n   \n    ConditionValue:\"critical\" \n   \n    ConditionType:\"StringEquals\" \n   \n   \n\nUsing these patterns would back up all Amazon Elastic Block Store (Amazon EBS)\nvolumes that are tagged as \"department=finance\", \"importance=critical\", in\naddition to an EBS volume with the specified volume Id.\n\nResources and conditions are additive in that all resources that match the\npattern are selected. This shouldn't be confused with a logical AND, where all\nconditions must match. The matching patterns are logically 'put together using\nthe OR operator. In other words, all patterns that match are selected for\nbackup.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -480,7 +480,7 @@
         },
         "DeleteBackupSelection": {
             "main": "./lib/actions/DeleteBackupSelection.js",
-            "title": "Deletes the resource selection associated with a backup plan that is specified by the <code>SelectionId</code>.",
+            "title": "DeleteBackupSelection",
             "description": "Deletes the resource selection associated with a backup plan that is specified by the <code>SelectionId</code>.",
             "fields": {
                 "verbose": {
@@ -497,7 +497,7 @@
         },
         "GetBackupSelection": {
             "main": "./lib/actions/GetBackupSelection.js",
-            "title": "Returns selection metadata and a document in JSON format that specifies a list of resources that are associated with a backup plan.",
+            "title": "GetBackupSelection",
             "description": "Returns selection metadata and a document in JSON format that specifies a list of resources that are associated with a backup plan.",
             "fields": {
                 "verbose": {
@@ -514,7 +514,7 @@
         },
         "ExportBackupPlanTemplate": {
             "main": "./lib/actions/ExportBackupPlanTemplate.js",
-            "title": "Returns the backup plan that is specified by the plan ID as a backup template.",
+            "title": "ExportBackupPlanTemplate",
             "description": "Returns the backup plan that is specified by the plan ID as a backup template.",
             "fields": {
                 "verbose": {
@@ -531,7 +531,7 @@
         },
         "ListBackupPlanVersions": {
             "main": "./lib/actions/ListBackupPlanVersions.js",
-            "title": "Returns version metadata of your backup plans, including Amazon Resource Names (ARNs), backup plan IDs, creation and deletion dates, plan names, and version IDs.",
+            "title": "ListBackupPlanVersions",
             "description": "Returns version metadata of your backup plans, including Amazon Resource Names (ARNs), backup plan IDs, creation and deletion dates, plan names, and version IDs.",
             "fields": {
                 "verbose": {
@@ -548,7 +548,7 @@
         },
         "GetBackupPlanFromJSON": {
             "main": "./lib/actions/GetBackupPlanFromJSON.js",
-            "title": "Returns a valid JSON document specifying a backup plan or an error.",
+            "title": "GetBackupPlanFromJSON",
             "description": "Returns a valid JSON document specifying a backup plan or an error.",
             "fields": {
                 "verbose": {
@@ -565,7 +565,7 @@
         },
         "ListBackupPlanTemplates": {
             "main": "./lib/actions/ListBackupPlanTemplates.js",
-            "title": "Returns metadata of your saved backup plan templates, including the template ID, name, and the creation and deletion dates.",
+            "title": "ListBackupPlanTemplates",
             "description": "Returns metadata of your saved backup plan templates, including the template ID, name, and the creation and deletion dates.",
             "fields": {
                 "verbose": {
@@ -582,7 +582,7 @@
         },
         "GetBackupPlanFromTemplate": {
             "main": "./lib/actions/GetBackupPlanFromTemplate.js",
-            "title": "Returns the template specified by its <code>templateId</code> as a backup plan.",
+            "title": "GetBackupPlanFromTemplate",
             "description": "Returns the template specified by its <code>templateId</code> as a backup plan.",
             "fields": {
                 "verbose": {
@@ -599,7 +599,7 @@
         },
         "ListProtectedResources": {
             "main": "./lib/actions/ListProtectedResources.js",
-            "title": "Returns an array of resources successfully backed up by AWS Backup, including the time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a resource type.",
+            "title": "ListProtectedResources",
             "description": "Returns an array of resources successfully backed up by AWS Backup, including the time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a resource type.",
             "fields": {
                 "verbose": {
@@ -616,7 +616,7 @@
         },
         "DescribeProtectedResource": {
             "main": "./lib/actions/DescribeProtectedResource.js",
-            "title": "Returns information about a saved resource, including the last time it was backed-up, its Amazon Resource Name (ARN), and the AWS service type of the saved resource.",
+            "title": "DescribeProtectedResource",
             "description": "Returns information about a saved resource, including the last time it was backed-up, its Amazon Resource Name (ARN), and the AWS service type of the saved resource.",
             "fields": {
                 "verbose": {
@@ -633,7 +633,7 @@
         },
         "ListRecoveryPointsByResource": {
             "main": "./lib/actions/ListRecoveryPointsByResource.js",
-            "title": "Returns detailed information about recovery points of the type specified by a resource Amazon Resource Name (ARN).",
+            "title": "ListRecoveryPointsByResource",
             "description": "Returns detailed information about recovery points of the type specified by a resource Amazon Resource Name (ARN).",
             "fields": {
                 "verbose": {
@@ -650,8 +650,8 @@
         },
         "StartRestoreJob": {
             "main": "./lib/actions/StartRestoreJob.js",
-            "title": "<p>Recovers the saved resource identified by an Amazon Resource Name (ARN). </p> <p>If the resource ARN is included in the request, then the last complete backup of that resource is recovered. If the ARN of a recovery point is supplied, then that recovery point is restored.</p>",
-            "description": "<p>Recovers the saved resource identified by an Amazon Resource Name (ARN). </p> <p>If the resource ARN is included in the request, then the last complete backup of that resource is recovered. If the ARN of a recovery point is supplied, then that recovery point is restored.</p>",
+            "title": "StartRestoreJob",
+            "description": "Recovers the saved resource identified by an Amazon Resource Name (ARN). \n\nIf the resource ARN is included in the request, then the last complete backup of\nthat resource is recovered. If the ARN of a recovery point is supplied, then\nthat recovery point is restored.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -667,7 +667,7 @@
         },
         "ListRestoreJobs": {
             "main": "./lib/actions/ListRestoreJobs.js",
-            "title": "Returns a list of jobs that AWS Backup initiated to restore a saved resource, including metadata about the recovery process.",
+            "title": "ListRestoreJobs",
             "description": "Returns a list of jobs that AWS Backup initiated to restore a saved resource, including metadata about the recovery process.",
             "fields": {
                 "verbose": {
@@ -684,7 +684,7 @@
         },
         "DescribeRestoreJob": {
             "main": "./lib/actions/DescribeRestoreJob.js",
-            "title": "Returns metadata associated with a restore job that is specified by a job ID.",
+            "title": "DescribeRestoreJob",
             "description": "Returns metadata associated with a restore job that is specified by a job ID.",
             "fields": {
                 "verbose": {
@@ -701,7 +701,7 @@
         },
         "GetSupportedResourceTypes": {
             "main": "./lib/actions/GetSupportedResourceTypes.js",
-            "title": "Returns the AWS resource types supported by AWS Backup.",
+            "title": "GetSupportedResourceTypes",
             "description": "Returns the AWS resource types supported by AWS Backup.",
             "fields": {
                 "verbose": {
@@ -718,7 +718,7 @@
         },
         "TagResource": {
             "main": "./lib/actions/TagResource.js",
-            "title": "Assigns a set of key-value pairs to a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN).",
+            "title": "TagResource",
             "description": "Assigns a set of key-value pairs to a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN).",
             "fields": {
                 "verbose": {
@@ -735,7 +735,7 @@
         },
         "ListTags": {
             "main": "./lib/actions/ListTags.js",
-            "title": "Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.",
+            "title": "ListTags",
             "description": "Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.",
             "fields": {
                 "verbose": {
@@ -752,7 +752,7 @@
         },
         "UntagResource": {
             "main": "./lib/actions/UntagResource.js",
-            "title": "Removes a set of key-value pairs from a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN)",
+            "title": "UntagResource",
             "description": "Removes a set of key-value pairs from a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN)",
             "fields": {
                 "verbose": {
